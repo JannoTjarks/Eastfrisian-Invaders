@@ -119,7 +119,6 @@ public class Boss1PlayerMovement : MonoBehaviour
 
             _invincibleFrame = true;
             _invincible.Start();
-
         }
     }
 
