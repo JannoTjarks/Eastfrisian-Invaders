@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Boss1PlayerMovement : MonoBehaviour
@@ -31,8 +29,8 @@ public class Boss1PlayerMovement : MonoBehaviour
     void Start()
     {
         _rb2d = GetComponent<Rigidbody2D>();
-        _lifeBar = (GameObject)Instantiate(LifeBarPrefab, new Vector2(gameObject.transform.position.x - 7,
-                gameObject.transform.position.y + 0.25F), Quaternion.identity);
+        //_lifeBar = (GameObject)Instantiate(LifeBarPrefab, new Vector2(gameObject.transform.position.x - 7,
+        //        gameObject.transform.position.y + 0.25F), Quaternion.identity);
         _shootAudio = GetComponent<AudioSource>();
         _invincible = new System.Diagnostics.Stopwatch();
     }

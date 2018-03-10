@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Boss1Movement : MonoBehaviour
@@ -31,6 +29,8 @@ public class Boss1Movement : MonoBehaviour
     private bool _isAttacking = false;
     private bool _Attacked = true;
     private System.Diagnostics.Stopwatch _shoot;
+    private AudioSource _shootAudio;
+    public AudioClip ShootSound;
 
     // Life
     public GameObject LifeBarPrefab;
@@ -46,14 +46,13 @@ public class Boss1Movement : MonoBehaviour
     {
         // Movement
         _rb2d = GetComponent<Rigidbody2D>();
+        _shootAudio = GetComponent<AudioSource>();
         _movementChanged = false;
         _movement = new System.Diagnostics.Stopwatch();
         _movement.Start();
         _shoot = new System.Diagnostics.Stopwatch();
         _shoot.Start();
         sprites = Resources.LoadAll<Sprite>("Bosses/SpritemapBoss1LifeBar");
-        Debug.Log(sprites.Length);
-
 
         // Sprite
         _sprite = GetComponent<SpriteRenderer>();
@@ -186,6 +185,7 @@ public class Boss1Movement : MonoBehaviour
                 }
             }
 
+            _shootAudio.PlayOneShot(ShootSound, 0.3F);
             _isAttacking = false;
         }
     }
