@@ -1,8 +1,14 @@
 # Eastfrisian-Invaders
-Eastfrisian-Invaders is a little Shoot 'em Up developed by a Eastfrisian-Guy.
-The Builds-Folder includes a HTML5-, a Windows-, a Linux-, and a Mac-Build to play. 
+Eastfrisian-Invaders is a little Shoot 'em Up developed by a Eastfrisian-Guy. 
+<br>
+<br>
+Unity and Visual Studio 2017 are used. The game is developed with C#.
+<br>
+<br>
+Downloadable versions can be found at "https://github.com/JannoTjarks/Eastfrisian-Invaders/releases".
 
-Head-Programmer: Janno Tjarks<br>
-Additional Programmer: Nils Kuhlmann<br>
-Design: Janno Tjarks<br>
-Soundtrack: Ove Melaa<br>
+Programmer: Janno Tjarks
+<br>
+Design: Janno Tjarks
+<br>
+Soundtrack: Ove Melaa
