@@ -1,0 +1,583 @@
+fileFormatVersion: 2
+guid: c99b07b2fdf271b479afc770a6d85e66
+timeCreated: 1512751236
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SpritemapBoss1LifeBar_0
+    21300002: SpritemapBoss1LifeBar_2
+    21300004: SpritemapBoss1LifeBar_4
+    21300006: SpritemapBoss1LifeBar_6
+    21300008: SpritemapBoss1LifeBar_8
+    21300010: SpritemapBoss1LifeBar_10
+    21300012: SpritemapBoss1LifeBar_12
+    21300014: SpritemapBoss1LifeBar_14
+    21300016: SpritemapBoss1LifeBar_16
+    21300018: SpritemapBoss1LifeBar_18
+    21300020: SpritemapBoss1LifeBar_20
+    21300022: SpritemapBoss1LifeBar_22
+    21300024: SpritemapBoss1LifeBar_24
+    21300026: SpritemapBoss1LifeBar_26
+    21300028: SpritemapBoss1LifeBar_28
+    21300030: SpritemapBoss1LifeBar_30
+    21300032: SpritemapBoss1LifeBar_32
+    21300034: SpritemapBoss1LifeBar_34
+    21300036: SpritemapBoss1LifeBar_36
+    21300038: SpritemapBoss1LifeBar_38
+    21300040: SpritemapBoss1LifeBar_40
+    21300042: SpritemapBoss1LifeBar_42
+    21300044: SpritemapBoss1LifeBar_44
+    21300046: SpritemapBoss1LifeBar_46
+    21300048: SpritemapBoss1LifeBar_48
+    21300050: SpritemapBoss1LifeBar_50
+    21300052: SpritemapBoss1LifeBar_52
+    21300054: SpritemapBoss1LifeBar_54
+    21300056: SpritemapBoss1LifeBar_56
+    21300058: SpritemapBoss1LifeBar_58
+    21300060: SpritemapBoss1LifeBar_30
+    21300062: SpritemapBoss1LifeBar_31
+    21300064: SpritemapBoss1LifeBar_32
+    21300066: SpritemapBoss1LifeBar_33
+    21300068: SpritemapBoss1LifeBar_34
+    21300070: SpritemapBoss1LifeBar_35
+    21300072: SpritemapBoss1LifeBar_36
+    21300074: SpritemapBoss1LifeBar_37
+    21300076: SpritemapBoss1LifeBar_38
+    21300078: SpritemapBoss1LifeBar_39
+    21300080: SpritemapBoss1LifeBar_40
+    21300082: SpritemapBoss1LifeBar_41
+    21300084: SpritemapBoss1LifeBar_42
+    21300086: SpritemapBoss1LifeBar_43
+    21300088: SpritemapBoss1LifeBar_44
+    21300090: SpritemapBoss1LifeBar_45
+    21300092: SpritemapBoss1LifeBar_46
+    21300094: SpritemapBoss1LifeBar_47
+    21300096: SpritemapBoss1LifeBar_48
+    21300098: SpritemapBoss1LifeBar_49
+    21300100: SpritemapBoss1LifeBar_50
+    21300102: SpritemapBoss1LifeBar_51
+    21300104: SpritemapBoss1LifeBar_52
+    21300106: SpritemapBoss1LifeBar_53
+    21300108: SpritemapBoss1LifeBar_54
+    21300110: SpritemapBoss1LifeBar_55
+    21300112: SpritemapBoss1LifeBar_56
+    21300114: SpritemapBoss1LifeBar_57
+    21300116: SpritemapBoss1LifeBar_58
+    21300118: SpritemapBoss1LifeBar_59
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_8
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_10
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_12
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_14
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_16
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_18
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_20
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_22
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_24
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 703
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_26
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_28
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 704
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_32
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_34
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_36
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_38
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_40
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_42
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_44
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_46
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_48
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_50
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_52
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_54
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_56
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SpritemapBoss1LifeBar_58
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 128
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
