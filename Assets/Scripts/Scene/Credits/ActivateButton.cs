@@ -6,22 +6,20 @@ public class ActivateButton : MonoBehaviour
 {
     public GameObject selectedObject;
 
-    private GameObject _camera;
-    private Rigidbody2D _rb2dCamera;
+    private RectTransform _rectTransform;
 
     // Start is called before the first frame update
     void Start()
     {
-        _camera = GameObject.FindGameObjectWithTag("MainCamera");
-        _rb2dCamera = _camera.GetComponent<Rigidbody2D>();
+        _rectTransform = GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_rb2dCamera.position.y >= 38)
+        if (_rectTransform.position.y >= 268)
         {
             selectedObject.SetActive(true);
-        }
+        }       
     }
 }

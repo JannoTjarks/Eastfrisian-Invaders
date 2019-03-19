@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Lifebar : MonoBehaviour
+public class LifebarBoss : MonoBehaviour
 {
-    public Sprite LifeBar3;
-    public Sprite LifeBar2;
-    public Sprite LifeBar1;
+    Sprite[] sprites;
+  
+    private int _life;
+    private int LIFEMAX;
+    private static LifebarBoss instance = null;
 
-    private int _life = 3;
-    private static Lifebar instance = null;
-
-    public static Lifebar Instance
+    public static LifebarBoss Instance
     {
         get
         {
@@ -26,6 +25,14 @@ public class Lifebar : MonoBehaviour
         {
             this._life = value;
             CheckLifebar();
+        }
+    }
+
+    public int SetLIFEMAX
+    {
+        set
+        {
+            this.LIFEMAX = value;
         }
     }
 
@@ -45,25 +52,20 @@ public class Lifebar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.GetComponent<Image>().sprite = LifeBar3;
+        sprites = Resources.LoadAll<Sprite>("Bosses/SpritemapBoss1LifeBar");
+        this.gameObject.GetComponent<Image>().sprite = sprites[0];
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void CheckLifebar()
     {
-        if (_life == 2)
-        {
-            this.gameObject.GetComponent<Image>().sprite = LifeBar2;
-        }
-
-        if (_life == 1)
-        {
-            this.gameObject.GetComponent<Image>().sprite = LifeBar1;
-        }
-    }    
+        int lifeBarPosition = ((LIFEMAX - _life) / 2);
+        if ((lifeBarPosition * 2) % 2 == 0 && _life < 60)
+            this.gameObject.GetComponent<Image>().sprite = sprites[lifeBarPosition];        
+    }
 }

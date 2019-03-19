@@ -33,11 +33,10 @@ public class Boss1Movement : MonoBehaviour
     public AudioClip ShootSound;
 
     // Life
-    public GameObject LifeBarPrefab;
     Sprite[] sprites;
-    private GameObject _lifeBar;
     private int _life = 60;
     private const int LIFEMAX = 60;
+    private LifebarBoss _lifebar;
 
     // Scene
     public int SceneIndex;
@@ -62,8 +61,8 @@ public class Boss1Movement : MonoBehaviour
         _opening.Start();
 
         // Lifebar
-        _lifeBar = (GameObject)Instantiate(LifeBarPrefab, new Vector2(gameObject.transform.position.x - 7,
-                gameObject.transform.position.y - 1), Quaternion.identity);
+        _lifebar = LifebarBoss.Instance;
+        _lifebar.SetLIFEMAX = LIFEMAX;
     }
 
     private void FixedUpdate()
@@ -211,17 +210,12 @@ public class Boss1Movement : MonoBehaviour
             if (_life == 0)
                 Destroy();
             else
-            {
-                int lifeBarPosition = ((LIFEMAX - _life) / 2);
-                if ((lifeBarPosition *2) % 2 == 0 && _life < 60)
-                    _lifeBar.GetComponent<SpriteRenderer>().sprite = sprites[lifeBarPosition];
-            }
+                _lifebar.Life = _life;           
         }
     }
 
     void Destroy()
     {
-        Destroy(_lifeBar);
         Destroy(gameObject);
         SceneManager.LoadScene(SceneIndex + 1, LoadSceneMode.Single);
     }

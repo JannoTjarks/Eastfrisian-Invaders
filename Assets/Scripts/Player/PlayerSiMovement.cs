@@ -19,7 +19,7 @@ public class PlayerSiMovement : MonoBehaviour
 
     // Life
     private int _life = 3;
-    private Lifebar _lifebar;
+    private LifebarPlayer _lifebar;
     private System.Diagnostics.Stopwatch _invincible;
     private bool _invincibleFrame = false;
 
@@ -28,7 +28,7 @@ public class PlayerSiMovement : MonoBehaviour
         _rb2d = GetComponent<Rigidbody2D>();
         _shootAudio = GetComponent<AudioSource>();
         _invincible = new System.Diagnostics.Stopwatch();
-        _lifebar = Lifebar.Instance;
+        _lifebar = LifebarPlayer.Instance;
     }
 
     void Update()
