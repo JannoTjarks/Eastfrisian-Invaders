@@ -18,21 +18,18 @@ public class Boss1PlayerMovement : MonoBehaviour
     public AudioClip ShootSound;
 
     // Life
-    public GameObject LifeBarPrefab;
-    private GameObject _lifeBar;
-    public Sprite LifeBar2;
-    public Sprite LifeBar1;
+
     private int _life = 3;
+    private Lifebar _lifebar;
     private System.Diagnostics.Stopwatch _invincible;
     private bool _invincibleFrame = false;
 
     void Start()
     {
         _rb2d = GetComponent<Rigidbody2D>();
-        //_lifeBar = (GameObject)Instantiate(LifeBarPrefab, new Vector2(gameObject.transform.position.x - 7,
-        //        gameObject.transform.position.y + 0.25F), Quaternion.identity);
         _shootAudio = GetComponent<AudioSource>();
         _invincible = new System.Diagnostics.Stopwatch();
+        _lifebar = Lifebar.Instance;
     }
 
     void Update()
@@ -91,13 +88,7 @@ public class Boss1PlayerMovement : MonoBehaviour
             _shootAudio.PlayOneShot(ShootSound, 0.125F);
             laser.GetComponent<Rigidbody2D>().AddForce(Vector2.up * LASERSPEED);
             _isAttacking = false;
-        }
-
-        // Lifebar
-        if (_life == 2)
-            _lifeBar.GetComponent<SpriteRenderer>().sprite = LifeBar2;
-        if (_life == 1)
-            _lifeBar.GetComponent<SpriteRenderer>().sprite = LifeBar1;
+        }        
     }
 
     //  Calls the destroying of the Player-Object or changes the life
@@ -111,9 +102,11 @@ public class Boss1PlayerMovement : MonoBehaviour
                 _life -= 1;
             else if (col.gameObject.tag == "Enemy")
                 _life -= 1;
-
+            
             if (_life == 0)
                 Destroy();
+
+            _lifebar.Life = _life;
 
             _invincibleFrame = true;
             _invincible.Start();

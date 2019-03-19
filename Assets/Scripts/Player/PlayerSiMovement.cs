@@ -18,11 +18,8 @@ public class PlayerSiMovement : MonoBehaviour
     public AudioClip ShootSound;
 
     // Life
-    public GameObject LifeBarPrefab;
-    private GameObject _lifeBar;
-    public Sprite LifeBar2;
-    public Sprite LifeBar1;
     private int _life = 3;
+    private Lifebar _lifebar;
     private System.Diagnostics.Stopwatch _invincible;
     private bool _invincibleFrame = false;
 
@@ -30,9 +27,8 @@ public class PlayerSiMovement : MonoBehaviour
     {
         _rb2d = GetComponent<Rigidbody2D>();
         _shootAudio = GetComponent<AudioSource>();
-        _lifeBar = (GameObject)Instantiate(LifeBarPrefab, new Vector2(gameObject.transform.position.x - 7,
-                gameObject.transform.position.y + 0.1F), Quaternion.identity);
         _invincible = new System.Diagnostics.Stopwatch();
+        _lifebar = Lifebar.Instance;
     }
 
     void Update()
@@ -91,12 +87,6 @@ public class PlayerSiMovement : MonoBehaviour
             laser.GetComponent<Rigidbody2D>().AddForce(Vector2.up * LASERSPEED);
             _isAttacking = false;
         }
-
-        // Lifebar
-        if (_life == 2)
-            _lifeBar.GetComponent<SpriteRenderer>().sprite = LifeBar2;
-        if (_life == 1)
-            _lifeBar.GetComponent<SpriteRenderer>().sprite = LifeBar1;
     }
 
     //  Calls the destroying of the Player-Object or changes the life
@@ -113,6 +103,8 @@ public class PlayerSiMovement : MonoBehaviour
 
             if (_life == 0)
                 Destroy();
+
+            _lifebar.Life = _life;
 
             _invincibleFrame = true;
             _invincible.Start();
