@@ -20,7 +20,7 @@ public class MusicChanger : MonoBehaviour
     {
         // Movement
         _music = GetComponent<AudioSource>();
-        MusicChange();
+        ChangeMusic();
     }
 
     private void Awake()
@@ -40,10 +40,10 @@ public class MusicChanger : MonoBehaviour
 
     void Update()
     {
-        MusicChange();
+        ChangeMusic();
     }
 
-    void MusicChange()
+    void ChangeMusic()
     {
         if (SceneManager.GetActiveScene().buildIndex < 3 && _music.clip != MenueSoundtrack)
         {

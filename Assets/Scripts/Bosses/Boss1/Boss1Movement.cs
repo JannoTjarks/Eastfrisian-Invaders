@@ -33,7 +33,6 @@ public class Boss1Movement : MonoBehaviour
     public AudioClip ShootSound;
 
     // Life
-    Sprite[] sprites;
     private int _life = 60;
     private const int LIFEMAX = 60;
     private LifebarBoss _lifebar;
@@ -51,7 +50,6 @@ public class Boss1Movement : MonoBehaviour
         _movement.Start();
         _shoot = new System.Diagnostics.Stopwatch();
         _shoot.Start();
-        sprites = Resources.LoadAll<Sprite>("Bosses/SpritemapBoss1LifeBar");
 
         // Sprite
         _sprite = GetComponent<SpriteRenderer>();

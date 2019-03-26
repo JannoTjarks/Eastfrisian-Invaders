@@ -14,6 +14,7 @@ TagManager:
   - Blanket
   - Lifebar
   - Exit
+  - Speedrun
   layers:
   - Default
   - TransparentFX
