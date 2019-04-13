@@ -17,7 +17,7 @@ public class ActivateButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_rectTransform.position.y >= 268)
+        if (_rectTransform.position.y >= 350)
         {
             selectedObject.SetActive(true);
         }       
