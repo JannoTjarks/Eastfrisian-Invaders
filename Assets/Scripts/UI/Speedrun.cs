@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class Speedrun : MonoBehaviour
 {
-    private Stopwatch stopWatch = new Stopwatch();
+    private static Stopwatch stopWatch = new Stopwatch();
+    private bool isStarted = false;
 
     GameObject textUI;
 
@@ -21,7 +22,7 @@ public class Speedrun : MonoBehaviour
     {
 
     }
-    
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -39,33 +40,47 @@ public class Speedrun : MonoBehaviour
 
     void Update()
     {
+
+        if (SceneManager.GetActiveScene().buildIndex > 2 && SceneManager.GetActiveScene().buildIndex < 9)
+        {
+            if (!isStarted)
+            {
+                stopWatch.Start();
+                isStarted = true;
+            }
+
+        }
+        else
+        {
+            if (isStarted)
+            {
+                stopWatch.Stop();
+                stopWatch.Reset();
+                isStarted = false;
+            }
+        }
+
         if (textUI != null)
         {
-            if (SceneManager.GetActiveScene().buildIndex > 2 && SceneManager.GetActiveScene().buildIndex < 9)
-            {
-                if (!stopWatch.IsRunning)
-                {
-                    stopWatch.Start();
-                }
-
-            }
-            else
-            {
-                if (stopWatch.IsRunning)
-                {
-                    stopWatch.Stop();
-                    stopWatch.Reset();
-                }                    
-            }
             TimeSpan ts = stopWatch.Elapsed;
             string elapsedTime = String.Format("{0:00}:{1:00}",
-                ts.Minutes, ts.Seconds);            
+                ts.Minutes, ts.Seconds);
             var text = textUI.GetComponent<Text>();
-            text.text = "TIME: " + elapsedTime;            
-        }        
-        else 
-        {
-            textUI = GameObject.FindGameObjectWithTag("Speedrun");            
+            text.text = "TIME: " + elapsedTime;
         }
+        else
+        {
+            textUI = GameObject.FindGameObjectWithTag("SpeedrunUI");
+        }
+    }
+
+    public static void RestartTimer()
+    {
+        stopWatch.Start();
+    }
+
+    public static void StopTimer()
+    {
+        stopWatch.Stop();
     }
 }

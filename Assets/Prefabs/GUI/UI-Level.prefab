@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5693522171291661309}
   m_Layer: 5
   m_Name: Speedrun
-  m_TagString: Speedrun
+  m_TagString: SpeedrunUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -360,7 +360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4096b2e7527fc439ae7a87135a4a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedObject: {fileID: 0}
 --- !u!1 &3702206627344276972
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4096b2e7527fc439ae7a87135a4a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedObject: {fileID: 3702206627079320015}
 --- !u!1 &5894888406483530906
 GameObject:
   m_ObjectHideFlags: 0

@@ -584,5 +584,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3254850356659464119, guid: 7286c35d4a12ec64b87a22d7b73ca875,
+        type: 3}
+      propertyPath: m_TagString
+      value: SpeedrunUI
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7286c35d4a12ec64b87a22d7b73ca875, type: 3}
