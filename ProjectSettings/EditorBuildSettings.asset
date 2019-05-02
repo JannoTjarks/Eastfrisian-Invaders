@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/TitleScreen.unity
     guid: c63fffa554b5e194d8ae081c86816e9a
   - enabled: 1
-    path: Assets/Scenes/Menus/Control.unity
-    guid: 347cf6af33c24a849a0045c7591191f9
-  - enabled: 1
     path: Assets/Scenes/Menus/GameOver.unity
     guid: 19875c018e291ec4ea29a09273a6b3c0
+  - enabled: 1
+    path: Assets/Scenes/Menus/Control.unity
+    guid: 347cf6af33c24a849a0045c7591191f9
   - enabled: 1
     path: Assets/Scenes/Levels/Level1.unity
     guid: 11f801189f226b540b1e00aba267b524

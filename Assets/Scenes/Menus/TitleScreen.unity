@@ -176,7 +176,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &185220132
 GameObject:
@@ -338,12 +338,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433485639}
   m_CullTransparentMesh: 0
---- !u!1 &466018261 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 408171919065546092, guid: 3d070d9862e35524badfdc0698ad83b4,
-    type: 3}
-  m_PrefabInstance: {fileID: 408171919430787769}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &467517762
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +351,7 @@ GameObject:
   - component: {fileID: 467517766}
   - component: {fileID: 467517765}
   - component: {fileID: 467517768}
+  - component: {fileID: 467517769}
   - component: {fileID: 467517764}
   m_Layer: 5
   m_Name: Speedrun
@@ -397,7 +392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba674cab5e826c646b1864a37ad991ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedObject: {fileID: 466018261}
 --- !u!114 &467517765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,9 +432,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 467517764}
-        m_MethodName: ActivateSpeedrun
-        m_Mode: 1
+      - m_Target: {fileID: 467517768}
+        m_MethodName: LoadByIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -449,13 +443,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 467517768}
-        m_MethodName: LoadByIndex
-        m_Mode: 3
+      - m_Target: {fileID: 467517769}
+        m_MethodName: Reset
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 467517764}
+        m_MethodName: ActivateSpeedrunTimer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1873326056}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -509,6 +514,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 040a253e7997c6a4192d76ed77f2c8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &467517769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467517762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46916da5909112e48aa1ae9643720e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &552621017
@@ -602,7 +619,7 @@ PrefabInstance:
     - target: {fileID: 7380861624530501825, guid: 781dca091ebdc7f4abef07a8429a8304,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7380861624530501825, guid: 781dca091ebdc7f4abef07a8429a8304,
         type: 3}
@@ -999,10 +1016,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1137,7 +1154,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1191,6 +1208,49 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 040a253e7997c6a4192d76ed77f2c8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1873326056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1873326057}
+  - component: {fileID: 1873326058}
+  m_Layer: 0
+  m_Name: SpeedrunTimer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1873326057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873326056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0076560974, y: 0.11743164, z: 62.380825}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1873326058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873326056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa5841f2198ae594e83825e2f4ef4cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1993922766
@@ -1348,6 +1408,7 @@ GameObject:
   - component: {fileID: 2035528137}
   - component: {fileID: 2035528136}
   - component: {fileID: 2035528139}
+  - component: {fileID: 2035528140}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -1426,6 +1487,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2035528140}
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2035528137
@@ -1477,72 +1549,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040a253e7997c6a4192d76ed77f2c8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &408171919430787769
-PrefabInstance:
+--- !u!114 &2035528140
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 408171919065546092, guid: 3d070d9862e35524badfdc0698ad83b4,
-        type: 3}
-      propertyPath: m_Name
-      value: SpeedrunTimer
-      objectReference: {fileID: 0}
-    - target: {fileID: 408171919065546094, guid: 3d070d9862e35524badfdc0698ad83b4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.007656604
-      objectReference: {fileID: 0}
-    - target: {fileID: 408171919065546094, guid: 3d070d9862e35524badfdc0698ad83b4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.117431596
-      objectReference: {fileID: 0}
-    - target: {fileID: 408171919065546094, guid: 3d070d9862e35524badfdc0698ad83b4,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 62.380825
-      objectReference: {fileID: 0}
-    - target: {fileID: 408171919065546094, guid: 3d070d9862e35524badfdc0698ad83b4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408171919065546094, guid: 3d070d9862e35524badfdc0698ad83b4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408171919065546094, guid: 3d070d9862e35524badfdc0698ad83b4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408171919065546094, guid: 3d070d9862e35524badfdc0698ad83b4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 408171919065546094, guid: 3d070d9862e35524badfdc0698ad83b4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 408171919065546094, guid: 3d070d9862e35524badfdc0698ad83b4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408171919065546094, guid: 3d070d9862e35524badfdc0698ad83b4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408171919065546094, guid: 3d070d9862e35524badfdc0698ad83b4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3d070d9862e35524badfdc0698ad83b4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035528134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46916da5909112e48aa1ae9643720e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

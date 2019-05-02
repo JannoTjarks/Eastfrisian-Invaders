@@ -19,21 +19,29 @@ public class Pause : MonoBehaviour
             if (!_paused)
             {
                 Time.timeScale = 0;
-                if (speedrunTimer.activeSelf)
+                if (speedrunTimer != null)
                 {
-                    Speedrun.StopTimer();
-                    Debug.Log("Stop");
+                    if (speedrunTimer.activeSelf)
+                    {
+                        Speedrun.StopTimer();
+                        Debug.Log("Stop");
+                    }
                 }
+                
                 _paused = true;                
             }
             else if (_paused)
             {
                 Time.timeScale = 1;
-                if (speedrunTimer.activeSelf)
+                if (speedrunTimer != null)
                 {
-                    Speedrun.RestartTimer();
-                    Debug.Log("Restart");
+                    if (speedrunTimer.activeSelf)
+                    {
+                        Speedrun.RestartTimer();
+                        Debug.Log("Restart");
+                    }                                    
                 }
+
                 _paused = false;                
             }
         }

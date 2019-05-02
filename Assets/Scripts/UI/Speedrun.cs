@@ -11,11 +11,13 @@ public class Speedrun : MonoBehaviour
 
     GameObject textUI;
 
-    // Play Global
-    private static Speedrun instance = null;
-    private static Speedrun Instance
+    private static Speedrun _instance = null;
+    public static Speedrun Instance
     {
-        get { return instance; }
+        get
+        {
+            return _instance;
+        }
     }
 
     void Start()
@@ -25,14 +27,14 @@ public class Speedrun : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null && instance != this)
+        if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
             return;
         }
         else
         {
-            instance = this;
+            _instance = this;
         }
 
         DontDestroyOnLoad(this.gameObject);
@@ -40,6 +42,10 @@ public class Speedrun : MonoBehaviour
 
     void Update()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 9)
+        {
+            Destroy(this.gameObject);
+        }
 
         if (SceneManager.GetActiveScene().buildIndex > 2 && SceneManager.GetActiveScene().buildIndex < 9)
         {
@@ -48,7 +54,6 @@ public class Speedrun : MonoBehaviour
                 stopWatch.Start();
                 isStarted = true;
             }
-
         }
         else
         {
@@ -67,6 +72,7 @@ public class Speedrun : MonoBehaviour
                 ts.Minutes, ts.Seconds);
             var text = textUI.GetComponent<Text>();
             text.text = "TIME: " + elapsedTime;
+            Stats.Time = elapsedTime;
         }
         else
         {

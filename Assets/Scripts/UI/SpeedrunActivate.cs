@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class SpeedrunActivate : MonoBehaviour
 {
-    public GameObject selectedObject;
-
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void ActivateSpeedrun()
+    public void ActivateSpeedrunTimer(GameObject timer)
     {
-        selectedObject.SetActive(true);
+        timer.SetActive(true);
     }
 }
